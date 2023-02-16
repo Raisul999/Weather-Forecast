@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import TopButton from './components/TopButton'
 import Input from './components/Input'
 import TimeAndLocation from './components/TimeAndLocation'
 import TempratureAndDetails from './components/TempratureAndDetails'
