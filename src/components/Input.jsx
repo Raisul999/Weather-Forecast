@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { UilSearch, UilLocationPoint } from '@iconscout/react-unicons'
-import { AiOutlineSearch } from 'react-icons/ai'
+
 const Input = ({ setQuery, units, setUnits }) => {
 
         const [city, setCity] = useState('')
@@ -36,10 +36,10 @@ const Input = ({ setQuery, units, setUnits }) => {
         }
         return (
                 <div className='flex flex-col justify-center my-6'>
-                        <div className='flex space-x-4 sm: justify-center items-center '>
+                        <div className='flex justify-center items-center space-x-4'>
                                 <input
                                         type="text"
-                                        className='text-xl font-light p-2 w-20 shadow-xl focus:outline-none capitalize sm:w-full '
+                                        className='text-md font-light p-2 max-auto shadow-xl focus:outline-none capitalize sm:w-full '
                                         placeholder='Search city...'
                                         value={city}
                                         onChange={(e) => setCity(e.target.value)}
@@ -60,7 +60,7 @@ const Input = ({ setQuery, units, setUnits }) => {
 
 
                         </div>
-                        <div className='flex flex-row mt-4'>
+                        <div className='flex justify-center items-center mt-4'>
 
                                 <button
                                         name='metric'

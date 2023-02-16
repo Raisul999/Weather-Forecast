@@ -39,7 +39,7 @@ function App() {
 
 
   return (
-    <div className={`py-1 px-10 bg-gradient-to-br from-cyan-700 to-blue-700 h-fit shadow-xl shadow-gray-400 ${formatBackground()} sm:py-5 px-32`}>
+    <div className={`py-1 px-10 bg-gradient-to-br from-cyan-700 to-blue-700 h-fit shadow-xl shadow-gray-400 ${formatBackground()} overflow-hidden sm:py-5 px-32`}>
       {/* <TopButton setQuery={setQuery} /> */}
       <Input 
        setQuery={setQuery}
