@@ -9,8 +9,8 @@ export default defineConfig({
       registerType: 'prompt',  
       includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],  
       manifest: {  
-  name: 'websitename',  
-        short_name: 'websitename',  
+  name: 'Weather',  
+        short_name: 'Weather',  
         description: 'Website description(Could be same with index.html file)',  
         theme_color: '#ffffff',  
         start_url: '/',  
