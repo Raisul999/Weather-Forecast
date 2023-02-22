@@ -1,13 +1,8 @@
-FROM node:alpine
-
+FROM node:17-alpine
 WORKDIR /app
-
 COPY package.json .
-
-RUN npm install
-
+RUN npm i
 COPY . .
-
-EXPOSE 3000
-
-CMD ["npm", "start"]
+## EXPOSE [Port you mentioned in the vite.config file]
+EXPOSE 5173
+CMD ["npm", "run", "dev"]
