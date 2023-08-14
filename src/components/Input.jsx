@@ -29,8 +29,6 @@ const Input = ({ setQuery, units, setUnits }) => {
   const handleUnitsChange = (e) => {
     let selectedunit = e.target.name;
 
-    console.log("selected unit", selectedunit);
-
     if (units !== selectedunit) {
       setUnits(selectedunit);
     }
@@ -40,24 +38,26 @@ const Input = ({ setQuery, units, setUnits }) => {
       <div className="flex justify-center items-center space-x-4">
         <input
           type="text"
-          className="text-md font-light p-2 max-auto shadow-xl focus:outline-none capitalize sm:w-full "
+          className="text-md font-light p-2 max-auto shadow-xl focus:outline-none capitalize sm:w-full"
           placeholder="Search city..."
           value={city}
           onChange={(e) => setCity(e.target.value)}
         />
-        <button>
-          <UilSearch
-            size={25}
-            className="text-white cursor-pointer transition ease-out hover:scale-125"
-            onClick={handleSearch}
-          />
-        </button>
-        <button>
-          <UilLocationPoint
-            className="text-white cursor-pointer transition ease-out hover:scale-125"
-            onClick={handleLocation}
-          />
-        </button>
+        <div className="flex justify-center items-center">
+          <button>
+            <UilSearch
+              size={25}
+              className="text-white cursor-pointer transition ease-out hover:scale-125"
+              onClick={handleSearch}
+            />
+          </button>
+          <button>
+            <UilLocationPoint
+              className="text-white cursor-pointer transition ease-out hover:scale-125"
+              onClick={handleLocation}
+            />
+          </button>
+        </div>
       </div>
       <div className="flex justify-center items-center mt-4">
         <button
