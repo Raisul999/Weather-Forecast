@@ -26,15 +26,19 @@ const TempratureAndDetails = ({
   units,
 }) => {
   return (
-    <div className="text-center ">
+    <div className="text-center">
       <div className="flex flex-col items-center justify-center py-3 text-xl text-cyan-300 sm:flex-row">
         {details}
       </div>
       <div className="flex flex-col items-center justify-around text-white py-3 sm:flex-row">
         <img src={iconUrlFromCode(icon)} alt="weather icon" className="w-20" />
-        <p className="text-5xl">
+        <p className="flex gap-1 text-5xl">
           {Math.floor(temp)}{" "}
-          {units == "metric" ? <span>&deg;C</span> : <span>&deg;F</span>}
+          {units == "metric" ? (
+            <span className="text-4xl">&deg;C</span>
+          ) : (
+            <span className="text-4xl">&deg;F</span>
+          )}
         </p>
         <div className="flex flex-col space-y-2">
           <div className="flex font-light text-sm items-center justify-center">
