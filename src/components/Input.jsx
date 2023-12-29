@@ -35,7 +35,7 @@ const Input = ({ setQuery, units, setUnits }) => {
   };
   return (
     <div className="flex flex-col justify-center my-6">
-      <div className="flex justify-center items-center space-x-4">
+      <div className="flex justify-center items-center">
         <input
           type="text"
           className="text-md font-light p-2 max-auto shadow-xl focus:outline-none capitalize sm:w-full"
@@ -43,7 +43,8 @@ const Input = ({ setQuery, units, setUnits }) => {
           value={city}
           onChange={(e) => setCity(e.target.value)}
         />
-        <div className="flex justify-center items-center">
+
+        <div className="flex justify-center items-center mx-1">
           <button>
             <UilSearch
               size={25}
@@ -51,13 +52,16 @@ const Input = ({ setQuery, units, setUnits }) => {
               onClick={handleSearch}
             />
           </button>
-          <button>
-            <UilLocationPoint
-              className="text-white cursor-pointer transition ease-out hover:scale-125"
-              onClick={handleLocation}
-            />
-          </button>
         </div>
+      </div>
+      <div className="flex justify-center items-center my-2">
+        {/* <span className="text-white sm:text-sm">Current location</span> */}
+        <button title="Current location">
+          <UilLocationPoint
+            className="text-white cursor-pointer transition ease-out hover:scale-125"
+            onClick={handleLocation}
+          />
+        </button>
       </div>
       <div className="flex justify-center items-center mt-4">
         <button
